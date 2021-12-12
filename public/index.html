@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neemias Queta</title>
+    <link rel = "icon" href = "https://cdn5.vectorstock.com/i/1000x1000/80/64/basketball-logo-icon-streetball-vector-20788064.jpg" type = "image/x-icon">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body style="background-color: grey">
+    <!-- Top navigation -->
+<div class="topnav">
+
+    <!-- Centered link -->
+    <div class="topnav-centered">
+      <a href="#home" class="active">Noticias Neemias Queta</a>
+    </div>
+  
+    <!-- Left-aligned links (default) -->
+    <a href="/news.html">Noticias</a>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Websites</a>
+        <div class="dropdown-content">
+        <a href="/news/ojogo.html">ojogo</a>
+        <a href="/news/tribunaexpresso.html">tribunaexpresso</a>
+        <a href="/news/tsf.html">tsf</a>
+        </div>
+    </li>
+    <button type="button" class="buttonLogin" id="btnModalLogin">
+        Iniciar Sessão
+    </button>
+
+    <button type="button" class="buttonRegistar" id="btnModalRegistar">
+        Registar
+    </button>
+
+    <button type="button" class="buttonLogOff" id="btnLogoff">
+        Log Out
+    </button>
+
+    <div class="modal fade" id="modalRegistar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Register New User
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">E-Mail</label>
+                    <input type="email" class="form-control" id="usernameRegistar" name="usernameRegistar"
+                        placeholder="E-Mail" />
+                    <p id="emailErroLoginRegistar"></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">Password</label>
+                    <input type="password" class="form-control" id="senhaRegistar" name="senhaRegistar"
+                        placeholder="Senha" />
+                    <p id="statusRegistar" style="color: white;"></p>
+                </div>
+                <div class="modal-footer d-block">
+                    <button id="btnCancelaRegistar" class="buttonCancelar" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="buttonSubmeter" id="btnSubmitRegistar" onclick="validaRegisto()">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para fazer login -->
+<!-- se retirar o data-bs-backdrop, o modal desaparece ao clicar no fundo da página -->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Insert Your Credentials
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    id="btnLoginClose"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">E-Mail</label>
+                    <input type="email" class="form-control" id="usernameLogin" name="usernameLogin"
+                        placeholder="E-Mail" />
+                    <p id="emailErroLogin"></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">Password</label>
+                    <input type="password" class="form-control" id="senhaLogin" name="senhaLogin"
+                        placeholder="Senha" />
+                    <p id="passErroLogin" style="color: white;"></p>
+                    <p id="statusLogin"></p>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe" />
+                    <label class="form-check-label" for="rememberMe" style="color: white;">Remember-me</label>
+                </div>
+                <div class="modal-footer d-block">
+                    <p id='pRegistar' class="float-start">
+                        <a href="#">Register</a>
+                    </p>
+                    <button class="buttonCancelar" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="buttonSubmeter" id="btnSubmitLogin" onclick="validaLogin()">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  </div>
+    
+    <header class="head">
+        <div class="container">
+                <!-- <div class="intro-heading">Cybersecurity News</div> -->
+                <div class="image">
+                <div class = "intro-text">Bem-vindo à minha API de notícias sobre Neemias Queta
+                    
+                    
+                </div>
+        </div>    
+    </header>
+    <div class="row">
+        <div class="column1"><a href="/news/ojogo.html"> <img src="https://news.in-pt.com/wp-content/uploads/2012/12/ojogo1.png" style="width:300px;height:200px;"></a><br /></div>
+        <div class="column2"><a href="/news/tribunaexpresso.html"> <img src="http://images-cdn.impresa.pt/impresa/2019-02-01-tribuna.png-1?v=w620h395"style="width:320px;height:160px;"> </a><br /></div>
+        <div class="column3"><a href="/news/tsf.html"> <img src="https://www.estg.ipp.pt/clipping/imagens-comunicacao-social/TSF.png"style="width:320px;height:160px;"></a><br /></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="content">
+            <p>.</p>
+        </div>
+        <div id="footer">
+            <p>&copy; Este é um projeto para a disciplina de Desenvolvimento Web</p>
+        </div>
+    </div>
+
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/users.js"></script>
+ 
+</body>
+</html>
